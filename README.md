@@ -68,7 +68,7 @@ O robô permite a gravação dos dados em um arquivo Excel (.xlsx) contendo duas
   - Nome do município
   - Código da estação estabelecido pelo CEMADEN
   - Identificador da estação definido pelo CEMADEN
-  - Estado
+  - Estado (UF)
   - Nome do local em que a estação está instalada
   - Coordenadas (Latitude e Longitude)
   - Estado da estação (Ativada ou Desativada)
