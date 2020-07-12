@@ -2,7 +2,7 @@
 
 # Descrição
 
-Robô que permite a coleta de dados de estações pluviométricas instaladas em alguns municípios do estado do Pará. As estações são gerenciadas pelo Centro Nacional de Monitoramento e Alertas de Desastres Naturais ([CEMADEN](http://www.cemaden.gov.br/)). O CEMADEN possui um [mapa interativo](http://www.cemaden.gov.br/mapainterativo/#) que permite visualizar os dados obtidos pelas estações a cada hora. Este robô pode ser modificado para obter dados de outras estações, sob a gestão do CEMADEN, localizadas em diversas regiões do país. 
+Robô que permite a coleta de dados de estações pluviométricas instaladas em alguns municípios do estado do Pará. As estações são gerenciadas pelo Centro Nacional de Monitoramento e Alertas de Desastres Naturais ([CEMADEN](http://www.cemaden.gov.br/)). O CEMADEN possui um [mapa interativo](http://www.cemaden.gov.br/mapainterativo/#) que permite visualizar os dados obtidos pelas estações a cada hora. Este robô obtêm os dados da página do CEMADEN podendo ser modificado para obter dados de outras estações, sob a gestão do CEMADEN, localizadas em diversas regiões do país. 
 
 # Exemplos de uso
 
