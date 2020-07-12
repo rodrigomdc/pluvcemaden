@@ -64,7 +64,7 @@ O robô permite a gravação dos dados em um arquivo Excel (.xlsx) contendo duas
   - Data da coleta
   - Hora da coleta
   
-- Informações de cada estação
+- Dados sobre cada estação
   - Nome do município
   - Código da estação estabelecido pelo CEMADEN
   - Identificador da estação definido pelo CEMADEN
