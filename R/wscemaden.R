@@ -24,16 +24,16 @@ get.data.station <- function(id_station){
 }
 
 #Obtem dados sobre cada estacao
-get.info.stations <- function(filter_location = FALSE, loc = 'all'){
+get.info.stations <- function(loc = 'all'){
   fileName <- 'data/dados.estacoes.pa.csv'
   data <- read_csv(fileName, 
                    col_types = 'ccccccc')
   if(!str_to_lower(loc) %in% str_to_lower(data$Municipio) & str_to_lower(loc) != 'all'){
     stop('Municipio nao encontrado na base!')
   }
-  if(filter_location & str_to_lower(loc) != 'all'){
+  if(str_to_lower(loc) != 'all'){
     data <- data %>%
-      filter(str_to_lower(data$Municipio) == str_to_lower(loc))
+     filter(str_to_lower(data$Municipio) %in% str_to_lower(loc))
   }
   return (as.data.frame(data))
 }
@@ -49,10 +49,10 @@ save.pluv.data <- function(to_save){
 }
 
 #Processa e retorna os dados obtidos da pagina do Cemaden
-cemaden.pluv.data <- function(filter_location = FALSE, location = 'all'){
+cemaden.pluv.data <- function(location = 'all'){
   data_df <- data.frame()
-  ifelse(filter_location & str_to_lower(location) != 'all', 
-         info_stations_df <- get.info.stations(filter_location, location),
+  ifelse(str_to_lower(location) != 'all', 
+         info_stations_df <- get.info.stations(location),
          info_stations_df <- get.info.stations())
   for(i in 1:nrow(info_stations_df)){
     dstation_df <- get.data.station(info_stations_df$IdEstacao[i])
@@ -91,7 +91,7 @@ cemaden.pluv.data <- function(filter_location = FALSE, location = 'all'){
 }
 
 #Teste
-data <- cemaden.pluv.data(T,'parauapebas') 
+data <- cemaden.pluv.data() 
 View(data$data_st)
 View(data$info_st)
 #save.pluv.data(data)
