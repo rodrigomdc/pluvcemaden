@@ -26,8 +26,7 @@ install.packages('stringr')
 install.packages('dplyr')
 ```
 
-A função principal se chama **cemaden.pluv.data(filter_location, location)** em que:
-- **filter_location:** habilita ou desabilita a filtragem para um município específico 
+A função principal se chama **cemaden.pluv.data(location)** em que:
 - **location:** nome do município que se deseja realizar a filtragem
 
 Ela retorna uma lista com 2 elementos:
